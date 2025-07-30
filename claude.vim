@@ -193,7 +193,7 @@ if !hasmapto('<Plug>ClaudeGenerate')
     nmap <C-g> <Plug>ClaudeGenerate
 endif
 
-nnoremap <silent> <Plug>ClaudeGenerate :call claude#ClaudeGenerateCode()<CR>
+nnoremap <silent> <Plug>ClaudeGenerate :call ClaudeGenerateCode()<CR>
 
 " Alternative key mappings you can use:
 " nmap <leader>cg :ClaudeGenerate<CR>
