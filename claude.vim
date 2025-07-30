@@ -119,7 +119,7 @@ function! s:CallBedrockAPI(comment_text, context, filetype)
     " Prepare Bedrock request body (Claude format)
     let messages = [ {  'role': 'user', 'content': [ { 'text': prompt } ]  } ]
     
-    let inference_config = { 'maxTokens': 512, 'temperature': 0.5,  'topP': 0.9  }
+    let inference_config = { 'maxTokens': 4096, 'temperature': 0.5,  'topP': 0.9  }
  
     let json_string = json_encode(messages)
     let inference_string = json_encode(inference_config)
