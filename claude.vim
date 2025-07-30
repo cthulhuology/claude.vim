@@ -135,7 +135,8 @@ function! s:CallBedrockAPI(comment_text, context, filetype)
     let aws_cmd .= ' --messages ' . shellescape(json_string)
     let aws_cmd .= ' --inference-config ' . shellescape(inference_string)
     let aws_cmd .= ' --cli-binary-format raw-in-base64-out'
-    
+
+    echo 'Generating code...'
     " Execute AWS CLI command
     let result = system(aws_cmd)
     
